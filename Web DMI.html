@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Myo-myo</title>
+
+<style>
+
+footer{
+background:white;
+color:#e64a4a;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+footer p{
+margin:5px 0;
+font-size:14px;
+}
+
+body{
+font-family: 'Poppins', sans-serif;
+margin:0;
+background:#f5f5f5;
+}
+
+/* NAVBAR */
+
+.nav{
+background:white;
+padding:15px 40px;
+font-weight:bold;
+font-size:22px;
+color:#e64a4a;
+}
+
+/* HERO */
+
+.hero{
+background: linear-gradient(90deg,#ff6a6a,#ff3c3c);
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
+}
+
+.hero button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:white;
+color:#ff3c3c;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* CATEGORY */
+
+.categories{
+display:flex;
+gap:20px;
+padding:20px 40px;
+background:white;
+}
+
+.categories div{
+padding:8px 16px;
+border-radius:8px;
+background:#eee;
+cursor:pointer;
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+padding:40px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.price{
+color:#ff3c3c;
+font-weight:bold;
+}
+
+.colors{
+margin:10px 0;
+}
+
+.dot{
+width:15px;
+height:15px;
+border-radius:50%;
+display:inline-block;
+margin-right:5px;
+}
+
+.btn{
+display:block;
+background:linear-gradient(90deg,#ff6a6a,#ff3c3c);
+color:white;
+text-align:center;
+padding:10px;
+border-radius:8px;
+text-decoration:none;
+margin-top:10px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+(ᵔᴥᵔ) Myo-myo
+</div>
+
+<div class="hero">
+<h1>✨Create Your Dream Custom Merch!✨</h1>
+<p>Design custom anime merch featuring your favorite characters.</p>
+<button onclick="alert('Start creating your merch!')">Start Creating!</button>
+</div>
+
+<div class="categories">
+<div>All</div>
+<div>Apparel</div>
+<div>Wall Art</div>
+<div>Collectibles</div>
+<div>Accessories</div>
+</div>
+
+<div class="products">
+
+<div class="card">
+<img src="keychain.png">
+<div class="card-content">
+<h3>Custom Keychain</h3>
+<div class="price">Rp 29.999</div>
+<div class="colors">
+<span class="dot" style="background:red"></span>
+<span class="dot" style="background:blue"></span>
+<span class="dot" style="background:yellow"></span>
+</div>
+<a class="btn" onclick="customize(this)">Customize</a>
+</div>
+</div>
+
+<div class="card">
+<img src="cases.png">
+<div class="card-content">
+<h3>Custom Phone Case</h3>
+<div class="price">Rp 59.999</div>
+<div class="colors">
+<span class="dot" style="background:black"></span>
+<span class="dot" style="background:pink"></span>
+<span class="dot" style="background:purple"></span>
+</div>
+<a class="btn" onclick="customize(this)">Customize</a>
+</div>
+</div>
+
+<div class="card">
+<img src="pluh.png">
+<div class="card-content">
+<h3>Custom Plushie</h3>
+<div class="price">Rp 100.999</div>
+<div class="colors">
+<span class="dot" style="background:orange"></span>
+<span class="dot" style="background:cyan"></span>
+<span class="dot" style="background:green"></span>
+</div>
+<a class="btn" onclick="customize(this)">Customize</a>
+</div>
+</div>
+
+<div class="card">
+<img src="L.png">
+<div class="card-content">
+<h3>Custom Shirt</h3>
+<div class="price">Rp 99.990</div>
+<div class="colors">
+<span class="dot" style="background:black"></span>
+<span class="dot" style="background:red"></span>
+<span class="dot" style="background:orange"></span>
+</div>
+<a class="btn" onclick="customize(this)">Customize</a>
+</div>
+</div>
+
+<div class="card">
+<img src="hoodi.png">
+<div class="card-content">
+<h3>Custom Hoodie</h3>
+<div class="price">Rp 167.999</div>
+<div class="colors">
+<span class="dot" style="background:black"></span>
+<span class="dot" style="background:orange"></span>
+<span class="dot" style="background:cyan"></span>
+</div>
+<a class="btn" onclick="customize(this)">Customize</a>
+</div>
+</div>
+
+<div class="card">
+<img src="postr.png">
+<div class="card-content">
+<h3>Custom Poster</h3>
+<div class="price">Rp 25.999</div>
+<div class="colors">
+<span class="dot" style="background:orange"></span>
+<span class="dot" style="background:yellow"></span>
+</div>
+<a class="btn" onclick="customize(this)">Customize</a>
+</div>
+</div>
+
+</div>
+
+<script>
+
+function customize(button){
+let card = button.closest(".card");
+let product = card.querySelector("h3").innerText;
+alert("You selected: " + product + "!");
+}
+
+</script>
+
+<footer>
+<p>(ᵔᴥᵔ) Myo-myo Custom Merch Store</p>
+<p>© 2026 Myo-myo. All rights reserved.</p>
+<p>Contact: myomyo@email.com</p>
+</footer>
+</body>
+</html>
